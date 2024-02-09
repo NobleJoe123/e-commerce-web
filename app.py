@@ -17,8 +17,8 @@ def shop():
 @app.route('/checkout', methods=['GET', 'POST'])
 def checkout():
     if request.method == 'POST':
-        return redirect(url_for('index'))
-    return render_template('shop.html')
+        return redirect(url_for('checkout'))
+    return render_template('chackout.html')
 
 
 if __name__ == '__main__':
