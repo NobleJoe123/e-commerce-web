@@ -12,9 +12,7 @@ def index():
 def shop():
     if request.method == 'POST':
         return redirect(url_for('index'))
-
-    # show the form, it wasn't submitted
-    return render_template('cool_form.html'
+    return render_template('shop.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
