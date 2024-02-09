@@ -9,7 +9,7 @@ def index():
 
 
 @app.route('/shop', methods=['GET', 'POST'])
-def cool_form():
+def shop():
     if request.method == 'POST':
         return redirect(url_for('index'))
 
