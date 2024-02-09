@@ -14,5 +14,12 @@ def shop():
         return redirect(url_for('index'))
     return render_template('shop.html')
 
+@app.route('/checkout', methods=['GET', 'POST'])
+def checkout():
+    if request.method == 'POST':
+        return redirect(url_for('index'))
+    return render_template('shop.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
