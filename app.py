@@ -26,6 +26,18 @@ def shopdetail():
         return redirect(url_for('shopdetail'))
     return render_template('shop-detail.html')
 
+@app.route('/testimonial', methods=['GET', 'POST'])
+def testimonial():
+    if request.method == 'POST':
+        return redirect(url_for('testimonial'))
+    return render_template('testimonial.html')
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        return redirect(url_for('contact'))
+    return render_template('contact.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
