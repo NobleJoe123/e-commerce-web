@@ -20,6 +20,12 @@ def checkout():
         return redirect(url_for('checkout'))
     return render_template('chackout.html')
 
+@app.route('/shopdetail', methods=['GET', 'POST'])
+def shopdetail():
+    if request.method == 'POST':
+        return redirect(url_for('shopdetail'))
+    return render_template('shop-detail.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
