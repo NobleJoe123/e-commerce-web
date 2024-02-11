@@ -28,10 +28,10 @@ def checkout():
         return redirect(url_for('checkout'))
     return render_template('chackout.html')
 
-@app.route('/shopdetail', methods=['GET', 'POST'])
+@app.route('/shop-detail', methods=['GET', 'POST'])
 def shopdetail():
     if request.method == 'POST':
-        return redirect(url_for('shopdetail'))
+        return redirect(url_for('shop-detail'))
     return render_template('shop-detail.html')
 
 @app.route('/testimonial', methods=['GET', 'POST'])
