@@ -44,7 +44,7 @@ def contact():
 def cart():
     if request.method == 'POST':
         return redirect(url_for('cart'))
-    return render_template('contact.html')
+    return render_template('cart.html')
 
 
 if __name__ == '__main__':
