@@ -11,7 +11,7 @@ def index():
 def home():
     if request.method == 'POST':
         return redirect(url_for('home'))
-    return render_template('shop.html')
+    return render_template('index.html')
 
 
 
