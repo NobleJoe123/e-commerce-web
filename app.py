@@ -40,6 +40,12 @@ def contact():
         return redirect(url_for('contact'))
     return render_template('contact.html')
 
+@app.route('/cart', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        return redirect(url_for('contact'))
+    return render_template('contact.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
