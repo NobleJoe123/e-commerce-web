@@ -7,6 +7,14 @@ app = Flask(__name__)
 def index():   
     return render_template('index.html')
 
+@app.route('/home', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        return redirect(url_for('home'))
+    return render_template('shop.html')
+
+
+
 
 @app.route('/shop', methods=['GET', 'POST'])
 def shop():
