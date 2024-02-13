@@ -74,14 +74,12 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 @app.route('/login/index')
-def home():
+def loggegin():
     if 'loggedin' in session:
         return render_template('index.html', username=session['username'])
     return redirect(url_for('/log'))
 
-@app.route('/')
-def signup():
-    return render_template('register.html')
+
      
 
 @app.route('/reg', methods=['GET', 'POST'])
