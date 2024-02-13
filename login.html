@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="container">
+        <div class="Login">
+            <h1>Login</h1>
+            <form action="{{ url_for('log') }}" method="post" autocomplete="off">
+                <label for="username">Username
+                    <i class="fa fa-user"></i>
+                </label>
+                <input type="text" name="username" placeholder="Username" id="username" required>
+                <label for="password">Password
+                    <i class="fa fa-lock"></i>
+                </label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+                <div class="msg">{{ msg }}</div>
+                <br> <br>
+                <button type="submit" id="demo">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
