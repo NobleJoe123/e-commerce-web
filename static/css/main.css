@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: green,rgb(15, 71, 15), rgb(23, 134, 69) ;
+    background-color:rgb(177, 238, 65) ;
     margin: 0;
 }
 
@@ -24,7 +24,7 @@ body {
 .login h1,
 .register h1 {
     text-align: center;
-    color: rgb(19, 34, 243);
+    color: rgb(177, 238, 65);
     font-size: 24px;
     padding: 20px 0 20px 0;
     border-bottom: 1px solid #dee0e4;
@@ -47,8 +47,8 @@ body {
 
 .login .links a:hover,
 .register .links a:hover {
-    border-bottom: 3px solid rgb(36, 15, 224);
-    color: rgb(16, 30, 224);
+    border-bottom: 3px solid rgb(177, 238, 65);
+    color: rgb(177, 238, 65);
 }
 
 .login form .register form {
@@ -67,7 +67,7 @@ body {
     align-items: center;
     width: 80px;
     height: 30px;
-    background-color: rgb(42, 8, 233);
+    background-color:rgb(177, 238, 65);
     color: #ffffff;
 }
 
@@ -88,7 +88,7 @@ body {
 .login form button{
     width: 150px;
     height: 40px;
-    background-color: blue;
+    background-color: rgb(177, 238, 65);
     color: white;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -100,8 +100,8 @@ body {
     transition: background-color 0.2s;
 
 }
-.register form button :hover,
+/* .register form button :hover,
 .login form button:hover{
     background-color: brown;
     transition: background-color 0.2s;
-}
+} */
