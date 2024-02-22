@@ -21,11 +21,19 @@ app.config['MYSQL_DB'] = 'commerce'
 
 mysql = MySQL(app)
 
+class NameForm(FlaskForm):
+     name = StringField('What is your name?', validators=[DataRequired()])
+     submit = SubmitField('Submit')
 
 
 @app.route('/')
-def index():   
-    return render_template('index.html')
+def index():
+    name = None
+    form = NameForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        form.name.data = ''   
+        return render_template('index.html', form=form, name=name)
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
@@ -121,9 +129,7 @@ def log():
     return render_template('login.html', msg = msg)
 
 
-class NameForm(FlaskForm):
-     name = StringField('What is your name?', validators=[DataRequired()])
-     submit = SubmitField('Submit')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
