@@ -72,14 +72,6 @@ def cart():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
-@app.route('/login/index')
-def loggegin():
-    if 'loggedin' in session:
-        return render_template('index.html', username=session['username'])
-    return redirect(url_for('/log'))
-
-
      
 
 @app.route('/reg', methods=['GET', 'POST'])
@@ -116,6 +108,12 @@ def log():
         else:
             msg = 'Incorrect username / password !'
     return render_template('login.html', msg = msg)
+
+@app.route('/login/index')
+def loggedin():
+    if 'loggedin' in session:
+        return render_template('index.html', username=session['username'])
+    return redirect(url_for('/log'))
 
 
 
