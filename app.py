@@ -102,7 +102,7 @@ def log():
             session['Id'] = account['id']
             session['Username'] = account['username']
             msg = 'Logged in successfully !'
-            return render_template('index.html', msg = 'username')
+            return render_template('logout.html', msg = 'username')
         else:
             msg = 'Incorrect username / password !'
     return render_template('login.html', msg = msg)
