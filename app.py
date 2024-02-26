@@ -121,6 +121,9 @@ def logout():
     session.pop('email', None)
     return redirect(url_for('login'))
 
+# @app.route('/placeorder')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
