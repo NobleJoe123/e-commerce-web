@@ -49,6 +49,12 @@ def shopdetail():
         return redirect(url_for('shopdetail'))
     return render_template('shop-detail.html')
 
+@app.route('/main', methods=['GET', 'POST'])
+def main ():
+    if request.method == 'POST':
+        return redirect(url_for('main'))
+    return render_template('shop-detail.html')
+
 @app.route('/testimonial', methods=['GET', 'POST'])
 def testimonial():
     if request.method == 'POST':
@@ -102,7 +108,7 @@ def log():
             session['Id'] = account['id']
             session['Username'] = account['username']
             msg = 'Logged in successfully !'
-            return render_template('logout.html', msg = 'username')
+            return render_template('main.html', msg = 'username')
         else:
             msg = 'Incorrect username / password !'
     return render_template('login.html', msg = msg)
