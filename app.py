@@ -53,7 +53,7 @@ def shopdetail():
 def main ():
     if request.method == 'POST':
         return redirect(url_for('main'))
-    return render_template('shop-detail.html')
+    return render_template('main.html')
 
 @app.route('/testimonial', methods=['GET', 'POST'])
 def testimonial():
