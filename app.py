@@ -3,8 +3,6 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 
 
-
-
 app = Flask(__name__)
 
 app.secret_key = 'key'
@@ -51,6 +49,12 @@ def shopdetail():
         return redirect(url_for('shopdetail'))
     return render_template('shop-detail.html')
 
+@app.route('/main', methods=['GET', 'POST'])
+def main ():
+    if request.method == 'POST':
+        return redirect(url_for('main'))
+    return render_template('main.html')
+
 @app.route('/testimonial', methods=['GET', 'POST'])
 def testimonial():
     if request.method == 'POST':
@@ -71,9 +75,9 @@ def cart():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return render_template('404.html')
      
-
+ 
 @app.route('/reg', methods=['GET', 'POST'])
 def reg():
     msg = ''
@@ -104,7 +108,7 @@ def log():
             session['Id'] = account['id']
             session['Username'] = account['username']
             msg = 'Logged in successfully !'
-            return render_template('index.html', msg = 'username')
+            return render_template('main.html', msg = 'username')
         else:
             msg = 'Incorrect username / password !'
     return render_template('login.html', msg = msg)
@@ -121,7 +125,10 @@ def logout():
     session.pop('loggedin', None)
     session.pop('userid', None)
     session.pop('email', None)
-    return redirect(url_for('login'))
+    return redirect(url_for('home'))
+
+# @app.route('/placeorder')
+
 
 
 if __name__ == '__main__':

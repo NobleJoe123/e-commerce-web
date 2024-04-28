@@ -47,7 +47,6 @@
                         <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">fruitables@gmail.com</a></small>
                     </div>
                     <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">{{session.Username}}</small>/</a>
                         <a href="{{ url_for('log') }}" class="text-white"><small class="text-white mx-2">Login</small>/</a>
                         <a href="{{ url_for('reg') }}" class="text-white"><small class="text-white ms-2">Register</small></a>
                     </div>
@@ -67,7 +66,6 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">
-                                    <a href="{{ url_for('cart') }}" class="dropdown-item active">Cart</a>
                                     <a href="{{ url_for('checkout') }}" class="dropdown-item">Chackout</a>
                                     <a href="{{ url_for('testimonial') }}" class="dropdown-item">Testimonial</a>
                                     
